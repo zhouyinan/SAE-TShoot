@@ -1,6 +1,8 @@
 # SAE-TShoot
 新浪云引擎自助排障工具，目前支持排除域名绑定故障。
 
+http://sae-tshoot.pumpkin.name/
+
 ## 运行环境
 * PHP（与ThinkPHP框架要求相同：PHP5.3以上版本，不支持PHP5.3dev版本和PHP6）
 * 如在SAE上运行需启用Memcache
