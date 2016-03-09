@@ -1,0 +1,5 @@
+name: efzer
+version: 1
+handle:
+- compress: if ( out_header["Content-Length"] >= 10000 ) compress
+- rewrite: if(!is_dir() && !is_file() && path~"^(.*)$") goto "index.php/$1"
