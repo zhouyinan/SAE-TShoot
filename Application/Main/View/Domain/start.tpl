@@ -64,7 +64,7 @@
             <div class="col-sm-8">
               <select id="beianfield" name="beian" class="form-control" required="required">
                 <option disabled="disabled">请选择</option>
-                <option id="cnameurlbeianed" value="yes">sinaapp.com</option>
+                <option id="cnameurlbeianed" value="yes">applinzi.com</option>
                 <option value="no">hk.cname.saebbs.com</option>
               </select>
             </div>
@@ -96,7 +96,7 @@
         $('form').submit();
       });
       $('#appnamefield').change(function(){
-        $("#cnameurlbeianed").text($('#appnamefield').val() + ".sinaapp.com");
+        $("#cnameurlbeianed").text($('#appnamefield').val() + ".applinzi.com");
       });
       <foreach name="errmsgs" item="errmsg">
         alert('{$errmsg}');

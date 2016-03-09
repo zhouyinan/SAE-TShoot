@@ -109,7 +109,7 @@ class DomainController extends Controller{
       exit();
     }
     if($_POST['beian']=='yes'){
-      $SAEIP = $this->dns_resolute('sinaapp.com');
+      $SAEIP = $this->dns_resolute('applinzi.com');
     }
     else{
       $SAEIP = $this->dns_resolute('hk.cname.saebbs.com');
@@ -129,14 +129,14 @@ class DomainController extends Controller{
       if($AlternateIP == $SAEIP){
         $_SESSION['DomainCheckResult']['reason'] = '您将域名' . $AlternateDomain . '指向了';
         if($_POST['beian']=='yes'){
-          $_SESSION['DomainCheckResult']['reason'] = $_SESSION['DomainCheckResult']['reason'] . $_POST['appname'] . 'sinaapp.com';
+          $_SESSION['DomainCheckResult']['reason'] = $_SESSION['DomainCheckResult']['reason'] . $_POST['appname'] . 'applinzi.com';
         }
         else{
           $_SESSION['DomainCheckResult']['reason'] = $_SESSION['DomainCheckResult']['reason'] . 'hk.cname.saebbs.com';
         }
         $_SESSION['DomainCheckResult']['reason'] = $_SESSION['DomainCheckResult']['reason'] . '而没有将' . $_POST['domain'] . '指向';
         if($_POST['beian']=='yes'){
-          $_SESSION['DomainCheckResult']['reason'] = $_SESSION['DomainCheckResult']['reason'] . $_POST['appname'] . 'sinaapp.com';
+          $_SESSION['DomainCheckResult']['reason'] = $_SESSION['DomainCheckResult']['reason'] . $_POST['appname'] . 'applinzi.com';
         }
         else{
           $_SESSION['DomainCheckResult']['reason'] = $_SESSION['DomainCheckResult']['reason'] . 'hk.cname.saebbs.com';
@@ -148,7 +148,7 @@ class DomainController extends Controller{
       }
       $_SESSION['DomainCheckResult']['reason'] = '域名' . $_POST['domain'] . '的DNS记录为空，并未CNAME指向';
       if($_POST['beian']=='yes'){
-        $_SESSION['DomainCheckResult']['reason'] = $_SESSION['DomainCheckResult']['reason'] . $_POST['appname'] . '.sinaapp.com';
+        $_SESSION['DomainCheckResult']['reason'] = $_SESSION['DomainCheckResult']['reason'] . $_POST['appname'] . '.applinzi.com';
       }
       else{
         $_SESSION['DomainCheckResult']['reason'] = $_SESSION['DomainCheckResult']['reason'] . 'hk.cname.saebbs.com';
@@ -161,7 +161,7 @@ class DomainController extends Controller{
       if(!$this->is_equal_ip_list($SAEIP,$DomainIP)){
         $_SESSION['DomainCheckResult']['reason'] = 'DNS记录设置错误，并未将域名' . $_POST['domain'] . '用CNAME记录指向';
         if($_POST['beian']=='yes'){
-        $_SESSION['DomainCheckResult']['reason'] = $_SESSION['DomainCheckResult']['reason'] . $_POST['appname'] . '.sinaapp.com';
+        $_SESSION['DomainCheckResult']['reason'] = $_SESSION['DomainCheckResult']['reason'] . $_POST['appname'] . '.applinzi.com';
         }
         else{
           $_SESSION['DomainCheckResult']['reason'] = $_SESSION['DomainCheckResult']['reason'] . 'hk.cname.saebbs.com';
@@ -173,7 +173,7 @@ class DomainController extends Controller{
       }
       else{
         $_SESSION['DomainCheckResult']['reason'] = '系统未检测到异常';
-        $_SESSION['DomainCheckResult']['suggestion'] = '系统未检测到异常';
+        $_SESSION['DomainCheckResult']['suggestion'] = '可以检查规定的域名验证是否完成。您可以<a href="http://saebbs.com/forum.php?mod=viewthread&tid=31256&fromuid=28205" target="_blank">点击这里阅读手工排障教程</a>。';
         $this->redirect('result',null,0,'Redirecting');
         exit();
       }
