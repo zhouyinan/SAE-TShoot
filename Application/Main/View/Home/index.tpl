@@ -39,7 +39,7 @@
       </div>
       <hr>
       <footer>
-        <p>&copy;2015&nbsp;<a href="https://github.com/zhouyinan" target="_blank">Yinan Zhou</a></p>
+        <p>&copy;2016&nbsp;<a href="https://github.com/zhouyinan" target="_blank">Yinan Zhou</a></p>
       </footer>
     </div>
   </body>
