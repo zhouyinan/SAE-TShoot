@@ -1,5 +1,5 @@
 # SAE-TShoot
-新浪云引擎自助排障工具，目前支持排除域名绑定故障。
+使用ThinkPHP框架编写的新浪云引擎自助排障工具，目前支持排除域名绑定故障。
 
 http://sae-tshoot.pumpkin.name/
 
