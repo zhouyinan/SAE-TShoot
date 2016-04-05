@@ -3,6 +3,11 @@ namespace Main\Controller;
 use Think\Controller;
 class DomainController extends Controller{
 
+  public function testKua(){
+    $home = new HomeController();
+    $home->index();
+  }
+
   public function index(){
     $this->redirect('start',null,0,'Redirecting');
   }

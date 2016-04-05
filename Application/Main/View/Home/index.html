@@ -1,0 +1,37 @@
+<extend name="layout" />
+<block name="body">
+  <div style="max-width:500px;margin-left:auto;margin-right:auto;">
+    <form method="POST" class="form-horizontal" style="margin:auto;margin-top:30px;" role="form">
+      <notempty name="errmsg">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="alert alert-danger" role="alert"><strong>{$errmsg}</strong></div>
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+      </notempty>
+      <div id="appnameinputdiv" class="form-group">
+        <label for="appnamefield" class="col-sm-2 control-label">
+          二级域名
+        </label>
+        <div class="col-sm-8">
+          <div class="input-group">
+            <input id="appnamefield" name="appname" type="text" pattern="^[a-z]{1}[a-z0-9]{3,32}$" class="form-control" maxlength="33" required="required">
+            <span class="input-group-addon">.sinaapp.com</span>
+          </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8 col-sm-offset-2">
+          <span class="help-block">创建应用时设定的二级域名</span>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+      <div class="row" style="margin-left:0px;margin-right:0px;">
+        <div class="col-sm-8 col-sm-offset-2" style="padding:0px 0px">
+          <p><button type="submit" class="btn btn-lg btn-primary btn-block">下一步</button></p>
+        </div>
+      </div>
+    </form>
+  </div>
+</block>

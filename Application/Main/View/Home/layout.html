@@ -19,27 +19,16 @@
     </div>
     <div class="jumbotron">
       <div class="container">
-        <h1>欢迎使用SAE故障诊断工具</h1>
-        <p>成长之路，难免遇到挫折，希望这个工具能让你尽快从挫折中站起来。</p>
+        <h1>{$title}</h1>
+        <p>{$subtitle}</p>
       </div>
     </div>
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h2>独立域名相关</h2>
-          <p>独立域名绑定、独立域名无法访问等问题</p>
-          <p><a href="{:U('Domain/start')}" class="btn btn-primary" role="button">开始诊断</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>微信公众平台相关</h2>
-          <p>Token验证通不过等问题</p>
-          <p><a class="btn btn-default" role="button" disabled="disabled">敬请期待</a></p>
-        </div>
-      </div>
-      <hr>
-      <footer>
-        <p>&copy;2016&nbsp;<a href="https://github.com/zhouyinan" target="_blank">Yinan Zhou</a></p>
+      <block name="body"></block>
+      <hr />
+      <footer style="text-align:center;">
+        <p>&copy;{:date('Y')}&nbsp;<a href="https://pumpkin.name" target="_blank">Yinan Zhou</a></p>
       </footer>
     </div>
   </body>

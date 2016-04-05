@@ -1,4 +1,5 @@
 <?php
+define('APP_DEBUG',true);
 define('APP_PATH','./Application/');
 define('RUNTIME_PATH','./Runtime/');
 define('BUILD_DIR_SECURE', false);
